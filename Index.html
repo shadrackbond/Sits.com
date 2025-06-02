@@ -4,167 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitter Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
+            <div class="container">
+                <a href="#hero" class="logo"><i class="fa-solid fa-hands-holding-child"></i> SitterPlatform</a>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services"></i> Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#sitters">Sitters</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="nav-button"></i> Log In</a></li>
+                    <li><a href="#" class="nav-button signup-button">Sign Up</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    
-    <section id="hero">
-        <h1>Hey Busy Parents</h1>
-        <p>We do all the work for your children</p>
-        <img src="image 1.jpg" >
-
-        <div class="hero-buttons">
-            <button onclick="findSitter()">Find a Sitter</button>
-            <button onclick="becomeSitter()">I'm a Sitter</button>
-        </div>
-    </section>
-
-    
-    <section id="sitters">
-        <h2>Meet Few Of Our Sitters</h2>
-
-        <label for="locationFilter">Select Location:</label>
-        <select id="locationFilter">
-            <option value="all">All Locations</option>
-            <option value="Lagos">Lagos, Nigeria</option>
-            <option value="Abuja">Abuja, Nigeria</option>
-            <option value="Benin">Benin, Nigeria</option>
-        </select>
-
-        <div id="sitterList">
-            <div class="sitter" data-location="Lagos">
-                <img src="ChizomJohn.jpg" alt="Chizom John">
-                <p>Chizom John - Lagos</p>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Hey Busy Parents</h1>
+                <p>We connect you with trusted sitters for your children.</p>
+                <img src="spring-1.png" alt="Happy child playing" class="hero-image">
+                <div class="hero-buttons">
+                    <button class="button-primary" onclick="findSitter()"><i class="fa-solid fa-magnifying-glass"></i> Find a Sitter</button>
+                    <button class="button-secondary" onclick="becomeSitter()"><i class="fa-solid fa-handshake-angle"></i> I'm a Sitter</button>
+                </div>
             </div>
-            <div class="sitter" data-location="Abuja">
-                <img src="BintuAbdul.jpg" alt="Bintu Abdul">
-                <p>Bintu Abdul - Abuja</p>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fa-solid fa-baby fa-3x service-icon"></i>
+                        <h3>Babysitting</h3>
+                        <p>Flexible and reliable babysitters for any occasion.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fa-solid fa-child-reaching fa-3x service-icon"></i>
+                        <h3>Nanny Services</h3>
+                        <p>Part-time and full-time nannies for consistent care.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fa-solid fa-graduation-cap fa-3x service-icon"></i>
+                        <h3>Tutoring Help</h3>
+                        <p>Sitters who can assist with homework and learning.</p>
+                    </div>
+                </div>
             </div>
-            <div class="sitter" data-location="Benin">
-                <img src="ElizabethLewis.jpg" alt="Elizabeth Lewis">
-                <p>Elizabeth Lewis- Benin</p>
+        </section>
+
+        <section id="sitters">
+            <div class="container">
+                <h2>Meet a Few Of Our Sitters</h2>
+                <div class="filter-container">
+                    <label for="locationFilter"><i class="fa-solid fa-filter"></i> Filter by Location:</label>
+                    <select id="locationFilter">
+                        <option value="all">All Locations</option>
+                        <option value="Lagos">Lagos, Nigeria</option>
+                        <option value="Abuja">Abuja, Nigeria</option>
+                        <option value="Benin">Benin, Nigeria</option>
+                    </select>
+                </div>
+                <div id="sitterList" class="sitter-grid">
+                    <div class="sitter-card" data-location="Lagos">
+                        <img src="ChizomJohn.jpg" alt="Chizom John">
+                        <h3>Chizom John</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+                        <button class="button-secondary"><i class="fa-solid fa-id-card"></i> View Profile</button>
+                    </div>
+                    <div class="sitter-card" data-location="Abuja">
+                        <img src="BintuAbdul.jpg" alt="Bintu Abdul">
+                        <h3>Bintu Abdul</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Abuja, Nigeria</p>
+                        <button class="button-secondary"><i class="fa-solid fa-id-card"></i> View Profile</button>
+                    </div>
+                    <div class="sitter-card" data-location="Benin">
+                        <img src="ElizabethLewis.jpg" alt="Elizabeth Lewis">
+                        <h3>Elizabeth Lewis</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Benin, Nigeria</p>
+                        <button class="button-secondary"><i class="fa-solid fa-id-card"></i> View Profile</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    
-    <section id="trust-safety">
-        <h2>Focused on Trust & Safety</h2>
-        <p>Our dedicated team champions safety procedures across the platform every day.</p>
-        <img src="image5.jpg" alt="Trust & Safety">
+        <section id="trust-safety">
+            <div class="container">
+                <h2>Focused on Trust & Safety</h2>
+                <p class="subtitle">Our dedicated team champions safety procedures across the platform every day.</p>
+                <img src="image5.jpg" alt="Trust & Safety illustration" class="section-image">
+                <div class="safety-features-grid">
+                    <div class="safety-feature">
+                        <h3><i class="fa-solid fa-user-shield"></i> Screening Tools</h3>
+                        <p>Secure messaging, interview booking, and background check options for families.</p>
+                    </div>
+                    <div class="safety-feature">
+                        <h3><i class="fa-solid fa-users-gear"></i> Trusted Community</h3>
+                        <p>Detailed sitter profiles, ratings & reviews, references, and scam prevention measures.</p>
+                    </div>
+                    <div class="safety-feature">
+                        <h3><i class="fa-solid fa-shield-heart"></i> Ongoing Monitoring</h3>
+                        <p>Family watchdog screening and sitter ID authentication for continuous safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="safety-feature">
-            <h3>Screening Tools for Families</h3>
-            <p>Secure messaging, interview booking, and background check options.</p>
-        </div>
-        <div class="safety-feature">
-            <h3>Trusted Community</h3>
-            <p>Detailed sitter profiles, ratings & reviews, references, and scam prevention measures.</p>
-        </div>
-        <div class="safety-feature">
-            <h3>Ongoing Monitoring</h3>
-            <p>Family watchdog screening and sitter ID authentication.</p>
-        </div>
-    </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p class="subtitle">So Much More Than A Babysitter</p>
+                <img src="image6.jpg" alt="Team discussing" class="section-image">
+                <p>At SitterPlatform, we believe every child deserves nurturing, safety, and joy. Our platform connects parents with reliable babysitters who create a secure and fun environment tailored to each child's needs.</p>
+            </div>
+        </section>
 
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>So Much More Than A Babysitter</p>
-        <img src="image6.jpg" alt="About Us">
-        <p>At Sits.com, we believe every child deserves nurturing, safety, and joy. Our babysitters create a secure and fun environment tailored to each child's needs.</p>
-    </section>
+        <section id="team">
+            <div class="container">
+                <h2>Our Team Commitment</h2>
+                <p class="subtitle">We work with the best hands! Our experienced babysitters provide a safe, fun, and nurturing environment.</p>
+                <img src="image7.jpg" alt="Diverse group of sitters" class="section-image">
+            </div>
+        </section>
 
+        <section id="pricing">
+            <div class="container">
+                <h2>Flexible Price Plans</h2>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Price (¥)</th>
+                            <th>Features</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standard Plan</td>
+                            <td>45,000</td>
+                            <td>Basic babysitting services for occasional needs.</td>
+                            <td><button class="button-primary create-plan"><i class="fa-solid fa-circle-check"></i> Choose Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>Premium Plan</td>
+                            <td>73,000</td>
+                            <td>Includes feeding & homework assistance, regular bookings.</td>
+                            <td><button class="button-primary create-plan"><i class="fa-solid fa-circle-check"></i> Choose Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited Plan</td>
+                            <td>100,000</td>
+                            <td>Travel & medical appointments coverage, dedicated support.</td>
+                            <td><button class="button-primary create-plan"><i class="fa-solid fa-circle-check"></i> Choose Plan</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <section id="team">
-        <h2>Our Team</h2>
-        <p>We work with the best hands! Our experienced babysitters provide a safe, fun, and nurturing environment.</p>
-        <img src="image7.jpg" alt="Our Team">
-    </section>
+        <section id="discount">
+            <div class="container">
+                <h2>Limited Time Offer!</h2>
+                <p>Enjoy <strong>10% OFF</strong> for every booking of more than two children.</p>
+                <img src="discount.jpg" alt="Discount Offer Illustration" class="section-image small-image">
+                <button class="button-primary" onclick="subscribeOffer()"><i class="fa-solid fa-bell-concierge"></i> Subscribe Now</button>
+            </div>
+        </section>
 
-    
-    <section id="pricing">
-        <h2>Price Tables</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Plan</th>
-                    <th>Price (¥)</th>
-                    <th>Features</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Standard Plan</td>
-                    <td>45,000</td>
-                    <td>Basic babysitting services</td>
-                    <td><button class="create-plan">Create Plan</button></td>
-                </tr>
-                <tr>
-                    <td>Premium Plan</td>
-                    <td>73,000</td>
-                    <td>Includes feeding & homework assistance</td>
-                    <td><button class="create-plan">Create Plan</button></td>
-                </tr>
-                <tr>
-                    <td>Unlimited Plan</td>
-                    <td>100,000</td>
-                    <td>Travel & medical appointments</td>
-                    <td><button class="create-plan">Create Plan</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p class="subtitle">Have questions or need assistance? Reach out to us!</p>
+                <div class="contact-content">
+                    <form id="contactForm" class="contact-form">
+                        <label for="name"><i class="fa-solid fa-user-pen"></i> Your Name:</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                        
+                        <label for="email"><i class="fa-regular fa-envelope"></i> Your Email:</label>
+                        <input type="email" id="email" required placeholder="yourname@example.com">
+                        
+                        <label for="message"><i class="fa-solid fa-comment-dots"></i> Your Message:</label>
+                        <textarea id="message" rows="5" required placeholder="Type your message here..."></textarea>
 
-    
-    <section id="discount">
-        <h2>Limited Offer: Get 10% Off!</h2>
-        <p>Enjoy **10% off** for every booking of more than two children.</p>
-        <img src="discount.jpg" alt="Discount Offer">
-        <button onclick="subscribeOffer()">Subscribe Now</button>
-    </section>
-
-    
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>Have questions or need assistance? Reach out to us!</p>
-
-        <form id="contactForm">
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" required placeholder="yourname@example.com">
-            
-            <label for="message">Your Message:</label>
-            <textarea id="message" required placeholder="Type your message here..."></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div id="contactDetails">
-            <p>Email: <a href="mailto:sitts.com@gmail.com">sitts.com@gmail.com</a></p>
-            <p>Phone: +233 24 370 3930</p>
-        </div>
-    </section>
+                        <button type="submit" class="button-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <div id="contactDetails" class="contact-details">
+                        <h3>Contact Information</h3>
+                        <p><i class="fa-solid fa-envelope-open-text"></i> <strong>Email:</strong> <a href="mailto:sitts.com@gmail.com">sitts.com@gmail.com</a></p>
+                        <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +233 24 370 3930</p>
+                        <p><i class="fa-solid fa-map-location-dot"></i> <strong>Address:</strong> 123 Sitter Lane, Happy Town, NG</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Sitter Platform</p>
+        <div class="container">
+            <p>&copy; 2025 Sitter Platform. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
